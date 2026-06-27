@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Terry Digital Portfolio</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="nav-name">Terry Tan Wee Chow</span>
+        <span class="nav-subtitle">Diploma in Engineering with Business Student</span>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+        <span class="mobile-menu-icon"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">About Me</a></li>
+        <li><a href="resume.html" class="nav-link">Experience</a></li>
+        <li><a href="project.html" class="nav-link active">Projects</a></li>
+        <li style="display: flex; align-items: center; margin-left: 8px;">
+          <label class="theme-switch" for="darkModeToggle" aria-label="Toggle Dark Mode">
+            <input type="checkbox" id="darkModeToggle" />
+            <div class="theme-slider">
+              <span class="icon">☀️</span>
+              <span class="icon">🌙</span>
+            </div>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Projects Header -->
+  <section class="container fade-in projects-header" style="margin-bottom: 20px;">
+    <h1 class="heading-xl">Featured Projects</h1>
+    <p class="text-lead">A showcase of my technical endeavors, highlighting web development and programming applications
+      built to solve real-world problems.</p>
+  </section>
+
+  <!-- Projects Gallery -->
+  <section class="container fade-in delay-1" style="margin-bottom: 60px;">
+    <div class="project-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="style/images/web development.jpg" alt="South Canteen Ban Mian & Fish Soup" class="project-image"
+            loading="lazy"
+            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title">South Canteen Ban Mian & Fish Soup</h3>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-bottom: 16px;">As part of my Internet and Web Development project, I created a responsive
+              website for the Ban Mian and Fish Soup stall in NYP’s South Canteen. The site showcases the stall's menu,
+              pricing, operating hours and forms, designed with a clean layout and user-friendly navigation to enhance the
+              customer experience. This project demonstrated my skills in basic HTML and basic CSS, along with attention
+              to real-world usability.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Web Development</span>
+          </div>
+          <div class="project-links" style="margin-top: 16px;">
+            <a href="style/BanMianWebsite.zip" class="btn btn-primary" download>Download Project (ZIP)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="style/images/python programming.jpg" alt="Grocery Check-out system" class="project-image"
+            loading="lazy"
+            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title">Grocery Check-out System</h3>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-bottom: 16px;">In a Programming module, my teammate, Yong Yu and I developed a simple grocery
+              checkout
+              system that allows users to select groceries, calculate totals with GSTs, and apply discounts. The program
+              features basic item management, real-time price updates, and a clean console interface, showcasing our
+              understanding of Python logic and teamwork in problem-solving.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Logic Programming</span>
+          </div>
+          <div class="project-links" style="margin-top: 16px;">
+            <a href="style/GroceryCheckout.zip" class="btn btn-primary" download>Download Project (ZIP)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-image-wrapper carousel-container" id="integrated-carousel">
+          <div class="carousel-track" id="integrated-track">
+            <!-- Photo 1 -->
+            <img src="style/images/integrated 1.jpg" alt="Integrated Project 1" class="project-image carousel-slide"
+              loading="lazy" style="object-fit: contain; background-color: #fafafa;"
+              onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EPhoto 1%3C/text%3E%3C/svg%3E'">
+            <!-- Photo 2 -->
+            <img src="style/images/integrated 2.jpg" alt="Integrated Project 2" class="project-image carousel-slide"
+              loading="lazy" style="object-fit: contain; background-color: #fafafa;"
+              onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EPhoto 2%3C/text%3E%3C/svg%3E'">
+            <!-- Video 1 -->
+            <video class="project-image carousel-slide" controls style="background-color: #000; object-fit: contain;"
+              src="style/images/integrated video.mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <button class="carousel-btn prev-btn" id="integrated-prev" aria-label="Previous image">&#10094;</button>
+          <button class="carousel-btn next-btn" id="integrated-next" aria-label="Next image">&#10095;</button>
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title">Integrated Projects</h3>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-bottom: 16px;">Together with my classmates, Kieren, Heidi, and Xandra, we developed a Smart
+              Food Redistribution System as part of the Integrated Project (Ideation and Realisation) modules across Year
+              2 Semester 1 and 2. In the ideation phase, the team designed a prototype concept for a vending-machine-like
+              system that collects surplus food, processes it safely, and redistributes it to communities in need. In the
+              realisation phase, the project was further developed with hardware integration using Arduino Uno and C++
+              programming to demonstrate a more functional system. Although the project did not win at the final mini
+              showcase, it provided valuable experience in prototyping, system development, and engaging with external
+              visitors such as NExplorers and Shell representatives.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">C++</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Hardware Integration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Header -->
+  <section class="container fade-in delay-2"
+    style="text-align: center; max-width: 800px; margin: 0 auto 40px; padding-top: 40px;">
+    <h2 class="heading-lg">Event Leadership & Community Engagement</h2>
+    <p class="text-lead">A collection of major events and community initiatives I have planned, led, and organized.</p>
+  </section>
+
+  <!-- Events Gallery -->
+  <section class="container fade-in delay-2" style="margin-bottom: 60px;">
+    <div class="project-grid">
+      <!-- Event 1 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="style/images/seg clf.jpg" alt="SEG Community Learning Festival" class="project-image" loading="lazy"
+            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title" style="margin-bottom: 4px;">SEG Community Learning Festival</h3>
+          <p class="duration" style="margin-bottom: 0;">16 June 2025</p>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-top: 16px; margin-bottom: 16px;"><strong>Admin IC (Organising Committee)</strong><br><br>As the Admin IC for the
+              Community Learning Festival under the School of Engineering Club, I was part of the organising committee
+              responsible for volunteer management. I worked closely with various student interest groups and schoolmates
+              to support workshop planning, while also liaising with community partners invited to NYP for the event.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Event Planning</span>
+            <span class="tag">Volunteer Management</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="style/images/try a skill (1).jpg" alt="Try-A-Skill@SEG 2025" class="project-image" loading="lazy"
+            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title" style="margin-bottom: 4px;">Try-A-Skill@SEG 2025</h3>
+          <p class="duration" style="margin-bottom: 0;">30 October 2025</p>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-top: 16px; margin-bottom: 16px;"><strong>Overall In-Charge</strong><br><br>This is my first major event in NYP
+              that I lead as the Overall In-Charge. This is an annual event for NYP SEG Club in collaboration with the
+              Interest Groups to plan activities to allow NYP students to learn more about the different diploma in the
+              school and try out fun games. Throughout the planning stage which spans about four months, I learnt
+              important skills to communicate more effectively with the stakeholders involved, my committee and the
+              Interest Groups. The event attracted about 100 students participating.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Leadership</span>
+            <span class="tag">Stakeholder Management</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="project-card">
+        <div class="project-image-wrapper carousel-container" id="iappreciate-carousel">
+          <div class="carousel-track" id="iappreciate-track">
+            <img src="style/images/i-appreciate (1).jpg" alt="I-Appreciate@SEG 2025 - 1"
+              class="project-image carousel-slide" loading="lazy"
+              onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EPhoto 1%3C/text%3E%3C/svg%3E'">
+            <img src="style/images/i appreciate (2).jpg" alt="I-Appreciate@SEG 2025 - 2"
+              class="project-image carousel-slide" loading="lazy"
+              onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EPhoto 2%3C/text%3E%3C/svg%3E'">
+            <img src="style/images/i appreciate (3).jpg" alt="I-Appreciate@SEG 2025 - 3"
+              class="project-image carousel-slide" loading="lazy"
+              onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EPhoto 3%3C/text%3E%3C/svg%3E'">
+            <img src="style/images/i appreciate (4).jpg" alt="I-Appreciate@SEG 2025 - 4"
+              class="project-image carousel-slide" loading="lazy" style="object-position: top center;"
+              onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EPhoto 4%3C/text%3E%3C/svg%3E'">
+            <img src="style/images/i appreciate (5).jpg" alt="I-Appreciate@SEG 2025 - 5"
+              class="project-image carousel-slide" loading="lazy"
+              onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EPhoto 5%3C/text%3E%3C/svg%3E'">
+            <img src="style/images/i appreciate (6).jpg" alt="I-Appreciate@SEG 2025 - 6"
+              class="project-image carousel-slide" loading="lazy"
+              onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EPhoto 6%3C/text%3E%3C/svg%3E'">
+          </div>
+          <button class="carousel-btn prev-btn" id="iappreciate-prev" aria-label="Previous image">&#10094;</button>
+          <button class="carousel-btn next-btn" id="iappreciate-next" aria-label="Next image">&#10095;</button>
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title" style="margin-bottom: 4px;">I-Appreciate@SEG 2025</h3>
+          <p class="duration" style="margin-bottom: 0;">30 October 2025</p>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-top: 16px; margin-bottom: 16px;"><strong>Assistant In-Charge</strong><br><br>I-Appreciate@SEG is an annual event
+              where NYP SEG Club planned fun carnival activities with rewards and carnival snacks for all students and
+              lecturers. It is also a day where NYP SEG shows our appreciation to our lecturers and non-teaching staffs
+              for their dedication to creating a good study environment for us. As the Assistant In-Charge, I played a
+              significant role in ensuring success of the event while working closely with the OIC and the Committee.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Carnival Planning</span>
+            <span class="tag">Team Coordination</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 4 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="style/images/wrg 2025.jpeg" alt="World Robotics Games 2025" class="project-image" loading="lazy"
+            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title" style="margin-bottom: 4px;">World Robotics Games 2025 (Singapore)</h3>
+          <p class="duration" style="margin-bottom: 0;">18 & 19 September 2025</p>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-top: 16px; margin-bottom: 16px;"><strong>Overall In-Charge</strong><br><br>World Robotics Games 2025 (Singapore)
+              was hosted at Nanyang Polytechnic on 18 and 19 September, an inter-institutional competition involving
+              secondary school, ITE, and polytechnic students. As the OIC, I led the planning and execution of the event,
+              worked with the Robotics Interest Group, and managing volunteers expectations and welfare.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Project Management</span>
+            <span class="tag">Robotics Competition</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 5 -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="style/images/seg community engagement comms.jpeg" alt="SEG Community Engagement with MINDs MYG"
+            class="project-image" loading="lazy"
+            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e5e5ea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2386868b\' font-family=\'sans-serif\' font-size=\'20\'%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title" style="margin-bottom: 4px;">SEG Community Engagement with MINDs MYG</h3>
+          <p class="duration" style="margin-bottom: 0;">7 February 2026</p>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-top: 16px; margin-bottom: 16px;"><strong>Overall In-Charge</strong><br><br>SEG Community Engagement with MINDS
+              MYG was organised by the Diploma in Sustainability in Engineering with Business (DSEB) chapter and SEG Club.
+              As the OIC, I led in the planning of the event which spans about two months. The event is one-day inclusive
+              celebration featuring interactive workshops and performances for individuals with intellectual disabilities,
+              in conjunction with Chinese New Year festivities. It was the first event I managed as the Chairman of the
+              DSEB Chapter, collaborating with SEG Club and external vendor, MINDs MYG.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Community Engagement</span>
+            <span class="tag">Inclusive Planning</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 6 -->
+      <div class="project-card">
+        <div class="project-image-wrapper"
+          style="min-height: 400px; display: flex; align-items: center; justify-content: center; background: #fafafa;">
+          <iframe src="https://www.instagram.com/reel/DTRq0XhkXzp/embed/" width="100%" height="100%" frameborder="0"
+            scrolling="no" allowtransparency="true"
+            style="border: none; overflow: hidden; min-height: 400px; max-width: 320px; margin: 0 auto; display: block;"></iframe>
+        </div>
+        <div class="project-content" style="cursor: pointer;" onclick="toggleTimeline(this)">
+          <h3 class="project-title" style="margin-bottom: 4px;">NYP Open House 2026</h3>
+          <p class="duration" style="margin-bottom: 0;">8 Jan-10 Jan 2026</p>
+          <div class="timeline-description">
+            <p class="project-description" style="margin-top: 16px; margin-bottom: 16px;"><strong>Overall In-Charge</strong><br><br>On 8 Jan-10 Jan 2026, NYP hosted open
+              house for prospective students and
+              parents. As part of the Diploma in Sustainability in Engineering with Business (DSEB), I led in the
+              planning, recruitment of volunteers for the diploma student ambassadors, and overseeing booth setup to
+              ensure a smooth and engaging visitor experience. Across all three days, we clocked in almost 1200 visitors
+              to our diploma booths, showcasing diploma's curriculum, projects, and opportunities, while ensuring
+              effective crowd flow, logistics, and on-the-day operations.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Event Planning</span>
+            <span class="tag">Volunteer Management</span>
+            <span class="tag">Logistics</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Terry Tan Wee Chow. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5"></path>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.background = 'var(--nav-bg)';
+        navbar.style.boxShadow = 'var(--shadow-sm)';
+      } else {
+        navbar.style.background = 'var(--nav-bg)';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+
+    // Carousel Logic for I-Appreciate
+    const track = document.getElementById('iappreciate-track');
+    const prevBtn = document.getElementById('iappreciate-prev');
+    const nextBtn = document.getElementById('iappreciate-next');
+
+    if (track && prevBtn && nextBtn) {
+      const slides = Array.from(track.children);
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+      }
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+      });
+    }
+
+    // Carousel Logic for Integrated Project
+    const intTrack = document.getElementById('integrated-track');
+    const intPrevBtn = document.getElementById('integrated-prev');
+    const intNextBtn = document.getElementById('integrated-next');
+
+    if (intTrack && intPrevBtn && intNextBtn) {
+      const intSlides = Array.from(intTrack.children);
+      let intCurrentIndex = 0;
+
+      function updateIntCarousel() {
+        intTrack.style.transform = 'translateX(-' + (intCurrentIndex * 100) + '%)';
+      }
+
+      intNextBtn.addEventListener('click', () => {
+        intCurrentIndex = (intCurrentIndex + 1) % intSlides.length;
+        updateIntCarousel();
+      });
+
+      intPrevBtn.addEventListener('click', () => {
+        intCurrentIndex = (intCurrentIndex - 1 + intSlides.length) % intSlides.length;
+        updateIntCarousel();
+      });
+    }
+  </script>
+  <script src="style/theme.js"></script>
+</body>
+
+</html>

@@ -49,7 +49,7 @@
         <span class="hero-greeting">Hello, I'm</span>
         <h1 class="heading-xl">Terry</h1>
         <h2 class="text-muted" style="font-size: clamp(1.2rem, 3vw, 2rem); font-weight: 500; margin-bottom: 24px;">
-          Aspiring Graduant in Diploma in Engineering with Business</h2>
+          Future Graduate in Diploma in Engineering with Business</h2>
         <p class="text-lead" style="text-align: justify;">
           Welcome to my digital space! I am passionate about bridging the gap between engineering solutions and business
           strategies. Explore my journey, projects, and experiences as I leverage technology to solve real-world
@@ -250,19 +250,151 @@
   <!-- Awards Section -->
   <section class="container fade-in delay-3" style="margin-bottom: 60px;">
     <h2 class="heading-lg text-center">Awards</h2>
-    <div
-      style="max-width: 800px; margin: 0 auto; background: var(--card-bg); padding: 32px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-      <ul class="skill-list" style="margin-top: 0;">
-        <li>NYP Director List (Year 2 Semester 1)</li>
-        <li>NYP Director List (Year 1 Semester 2)</li>
-        <li>ITE College East Service Star Award Diamond</li>
-        <li>ITE College East Service Star Award Gold</li>
-        <li>Edusave Scholarship 2021</li>
-        <li>National Youth Achievement Award - Silver Medal</li>
-        <li>Edusave Good Progress Award 2019</li>
+
+    <!-- Awards WITH certificates/documents (card grid) -->
+    <div class="awards-cert-grid">
+
+      <!-- Edusave Good Progress Award -->
+      <div class="award-cert-card">
+        <div class="award-cert-badge">Certificate</div>
+        <div class="award-cert-photo-wrapper" onclick="openLightbox(this)">
+          <img
+            src="style/images/edusave_good_progress_award.jpg"
+            alt="Edusave Good Progress Award Certificate"
+            class="award-cert-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="award-cert-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-secondary); opacity: 0.4;">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px;">Add your photo here:<br><code style="font-size: 0.75rem;">style/images/edusave_good_progress_award.jpg</code></p>
+          </div>
+        </div>
+        <div class="award-cert-info">
+          <h4 class="award-cert-title">Edusave Good Progress Award 2019</h4>
+          <p class="award-cert-subtitle">Ministry of Education, Singapore</p>
+        </div>
+      </div>
+
+      <!-- Edusave Scholarship -->
+      <div class="award-cert-card">
+        <div class="award-cert-badge">Certificate</div>
+        <div class="award-cert-photo-wrapper" onclick="openLightbox(this)">
+          <img
+            src="style/images/edusave_scholarship.jpg"
+            alt="Edusave Scholarship Certificate"
+            class="award-cert-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="award-cert-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-secondary); opacity: 0.4;">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px;">Add your photo here:<br><code style="font-size: 0.75rem;">style/images/edusave_scholarship.jpg</code></p>
+          </div>
+        </div>
+        <div class="award-cert-info">
+          <h4 class="award-cert-title">Edusave Scholarship 2021</h4>
+          <p class="award-cert-subtitle">Ministry of Education, Singapore</p>
+        </div>
+      </div>
+
+      <!-- ITE Service Star Award Gold -->
+      <div class="award-cert-card">
+        <div class="award-cert-badge">Certificate</div>
+        <div class="award-cert-photo-wrapper" onclick="openLightbox(this)">
+          <img
+            src="style/images/ite_service_star_gold.jpg"
+            alt="ITE Service Star Award Gold Certificate"
+            class="award-cert-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="award-cert-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-secondary); opacity: 0.4;">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px;">Add your photo here:<br><code style="font-size: 0.75rem;">style/images/ite_service_star_gold.jpg</code></p>
+          </div>
+        </div>
+        <div class="award-cert-info">
+          <h4 class="award-cert-title">ITE College East Service Star Award Gold</h4>
+          <p class="award-cert-subtitle">ITE College East</p>
+        </div>
+      </div>
+
+      <!-- NYP Director List — Year 2 Semester 1 -->
+      <div class="award-cert-card">
+        <div class="award-cert-badge">Certificate</div>
+        <div class="award-cert-photo-wrapper award-cert-pdf-wrapper" onclick="openPdfLightbox('style/images/nyp_director_list_y2s1.pdf')" role="button" tabindex="0" aria-label="View NYP Director List Year 2 Semester 1 PDF">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color);">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span class="award-pdf-label">Click to view PDF</span>
+          <span class="award-pdf-filename">nyp_director_list_y2s1.pdf</span>
+        </div>
+        <div class="award-cert-info">
+          <h4 class="award-cert-title">NYP Director List</h4>
+          <p class="award-cert-subtitle">Nanyang Polytechnic &mdash; Year 2 Semester 1</p>
+        </div>
+      </div>
+
+      <!-- NYP Director List — Year 1 Semester 2 -->
+      <div class="award-cert-card">
+        <div class="award-cert-badge">Certificate</div>
+        <div class="award-cert-photo-wrapper award-cert-pdf-wrapper" onclick="openPdfLightbox('style/images/nyp_director_list_y1s2.pdf')" role="button" tabindex="0" aria-label="View NYP Director List Year 1 Semester 2 PDF">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color);">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span class="award-pdf-label">Click to view PDF</span>
+          <span class="award-pdf-filename">nyp_director_list_y1s2.pdf</span>
+        </div>
+        <div class="award-cert-info">
+          <h4 class="award-cert-title">NYP Director List</h4>
+          <p class="award-cert-subtitle">Nanyang Polytechnic &mdash; Year 1 Semester 2</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Awards WITHOUT certificates (clean list card) -->
+    <div class="awards-list-card">
+      <h3 class="awards-list-heading">Other Achievements</h3>
+      <ul class="awards-list">
+        <li>
+          <span class="award-bullet">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-color)" stroke="none"><circle cx="12" cy="12" r="8"/></svg>
+          </span>
+          <span>ITE College East Service Star Award Diamond</span>
+        </li>
+        <li>
+          <span class="award-bullet">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-color)" stroke="none"><circle cx="12" cy="12" r="8"/></svg>
+          </span>
+          <span>National Youth Achievement Award &mdash; Silver Medal</span>
+        </li>
       </ul>
     </div>
+
   </section>
+
+  <!-- Unified lightbox overlay (image + PDF) -->
+  <div id="certLightbox" class="cert-lightbox" onclick="closeLightbox()">
+    <button class="cert-lightbox-close" aria-label="Close">&times;</button>
+    <img id="certLightboxImg" src="" alt="Certificate full view" class="cert-lightbox-img" style="display:none;">
+    <iframe id="certLightboxPdf" src="" class="cert-lightbox-pdf" style="display:none;" title="PDF Viewer"></iframe>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -299,6 +431,43 @@
         navbar.style.boxShadow = 'none';
       }
     });
+  </script>
+  <script>
+    // Certificate Image Lightbox
+    function openLightbox(wrapper) {
+      const img = wrapper.querySelector('.award-cert-photo');
+      if (!img || img.style.display === 'none') return;
+      const lb = document.getElementById('certLightbox');
+      const lbImg = document.getElementById('certLightboxImg');
+      const lbPdf = document.getElementById('certLightboxPdf');
+      lbPdf.style.display = 'none'; lbPdf.src = '';
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbImg.style.display = 'block';
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    // PDF Lightbox
+    function openPdfLightbox(pdfPath) {
+      const lb = document.getElementById('certLightbox');
+      const lbImg = document.getElementById('certLightboxImg');
+      const lbPdf = document.getElementById('certLightboxPdf');
+      lbImg.style.display = 'none'; lbImg.src = '';
+      lbPdf.src = pdfPath;
+      lbPdf.style.display = 'block';
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      const lb = document.getElementById('certLightbox');
+      lb.classList.remove('active');
+      document.getElementById('certLightboxImg').style.display = 'none';
+      document.getElementById('certLightboxImg').src = '';
+      document.getElementById('certLightboxPdf').style.display = 'none';
+      document.getElementById('certLightboxPdf').src = '';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
   <script src="style/theme.js"></script>
 </body>

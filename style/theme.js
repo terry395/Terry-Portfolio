@@ -50,20 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Interactive Timeline Logic
 window.toggleTimeline = function(element) {
-  const description = element.querySelector('.timeline-description');
-  
-  if (!description) return;
-  
-  const isExpanded = description.classList.contains('expanded');
-  
-  // Close all descriptions first (accordion style)
+  const descriptions = element.querySelectorAll('.timeline-description');
+
+  if (!descriptions.length) return;
+
+  const isExpanded = descriptions[0].classList.contains('expanded');
+
+  // Close all descriptions across the whole page first (accordion style)
   document.querySelectorAll('.timeline-description').forEach(desc => {
     desc.classList.remove('expanded');
   });
-  
-  // Toggle the clicked one
+
+  // If it wasn't already open, expand ALL description blocks inside this card
   if (!isExpanded) {
-    description.classList.add('expanded');
+    descriptions.forEach(desc => desc.classList.add('expanded'));
   }
 };
 

@@ -954,3 +954,328 @@ input:checked + .theme-slider:before {
     grid-template-columns: 1fr;
   }
 }
+
+/* =============================================
+   Awards Section — Certificate Cards
+   ============================================= */
+
+.awards-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.award-cert-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.award-cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.award-cert-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+  z-index: 2;
+}
+
+.award-cert-photo-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.award-cert-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.5s ease;
+  background: var(--bg-color);
+}
+
+.award-cert-card:hover .award-cert-photo {
+  transform: scale(1.02);
+}
+
+/* Clickable photo wrapper cursor */
+.award-cert-photo-wrapper[onclick] {
+  cursor: zoom-in;
+}
+
+.award-cert-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--bg-color),
+    var(--bg-color) 8px,
+    var(--border-color) 8px,
+    var(--border-color) 9px
+  );
+}
+
+.award-cert-info {
+  padding: 20px 24px;
+}
+
+.award-cert-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.award-cert-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* PDF Award Card */
+.award-cert-pdf-wrapper {
+  cursor: pointer;
+}
+
+.award-pdf-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  text-decoration: none;
+  gap: 10px;
+  transition: background var(--transition-fast);
+}
+
+.award-pdf-link:hover {
+  background: color-mix(in srgb, var(--accent-color) 8%, var(--bg-color));
+}
+
+.award-pdf-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.award-pdf-filename {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+  text-align: center;
+}
+
+/* =============================================
+   Awards Section — Other Achievements List
+   ============================================= */
+
+.awards-list-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 32px 36px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.awards-list-heading {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.awards-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.98rem;
+  color: var(--text-primary);
+}
+
+.awards-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.award-bullet {
+  flex-shrink: 0;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============================================
+   Work Experience — Internship Certificate Block
+   ============================================= */
+
+.internship-cert-block {
+  margin-top: 20px;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 16px;
+}
+
+.internship-cert-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.internship-cert-photo-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  position: relative;
+}
+
+.internship-cert-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.5s ease;
+  background: var(--bg-color);
+}
+
+.internship-cert-photo:hover {
+  transform: scale(1.02);
+}
+
+.internship-cert-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--bg-color),
+    var(--bg-color) 8px,
+    var(--border-color) 8px,
+    var(--border-color) 9px
+  );
+}
+
+/* =============================================
+   Certificate Lightbox
+   ============================================= */
+
+.cert-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  cursor: zoom-out;
+}
+
+.cert-lightbox.active {
+  display: flex;
+}
+
+.cert-lightbox-img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  cursor: default;
+  background: white;
+  padding: 8px;
+}
+
+.cert-lightbox-pdf {
+  width: 90vw;
+  height: 88vh;
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  cursor: default;
+  background: white;
+}
+
+.cert-lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+  line-height: 1;
+}
+
+.cert-lightbox-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Responsive — Awards cert grid single column */
+@media (max-width: 600px) {
+  .awards-cert-grid {
+    grid-template-columns: 1fr;
+  }
+}

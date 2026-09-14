@@ -1065,6 +1065,31 @@ input:checked + .theme-slider:before {
   cursor: pointer;
 }
 
+/* PDF thumbnail canvas: hidden until page 1 has rendered, so the
+   "Click to view PDF" placeholder shows as a fallback until then. */
+.award-cert-pdf-canvas {
+  display: none;
+}
+
+.award-cert-pdf-canvas.is-loaded {
+  display: block;
+}
+
+.award-pdf-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .award-pdf-link {
   display: flex;
   flex-direction: column;
